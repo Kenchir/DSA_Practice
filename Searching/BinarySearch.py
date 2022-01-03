@@ -2,30 +2,27 @@
 '''
 Binary search finds a target in a sorted Array
 TC=O(logn)
+Best case TC= O(1)
 SC= O(1)
 [1,2,3,4,5,6,7,8]
 '''
 
 def binary_search(arr,target):
     n=len(arr)
+    start=0
+    end=n-1
+    while start<=end:
+        mid=start+(end-start)//2
 
-    if target==arr[0]:
-        return 0
-    if target==arr[n-1]:
-        return n-1
-    middle=n//2
-    while middle>0 and middle<n-1:
-        if arr[middle]==target:
-            return middle
+        if arr[mid]==target:
+            return target
+        elif arr[mid]>target:
+            end=mid-1
         else:
-            if arr[middle]>target:
-                middle=middle//2
-                print(middle)
-            else:
-                middle=(n-middle)//2+middle
+            start=mid+1
     return -1
 
 
 # assert(7==binary_search([1,2,3,4,5,6,7,8],8))
 
-print(binary_search([1,2,3,4,5,6,7,8],7))
+print(binary_search([1,2,3,4,5,6,7,8,14,19,121],7.5))

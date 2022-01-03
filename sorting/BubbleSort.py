@@ -8,13 +8,14 @@ Time compexity= O(n^2) -Worst
 def BubbleSort(arr):
     n=len(arr)
 
-
     for i in range(n):
         swapped=False
+
         for j in range(i,n-i-1):
             if arr[j]>arr[j+1]:
                 arr[j],arr[j+1]=arr[j+1],arr[j]
                 swapped=True
+                
         if swapped is False:
             print("sorted")
             return arr

@@ -1,5 +1,7 @@
 # from _typeshed import Self
+'''
 
+'''
 
 class Node:
     def __init__(self,data):
