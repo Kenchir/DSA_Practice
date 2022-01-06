@@ -12,14 +12,16 @@ def binary_search(arr,target):
     start=0
     end=n-1
     while start<=end:
-        mid=start+(end-start)//2
+        mid = start + (end - start) // 2
 
-        if arr[mid]==target:
+        if arr[mid] == target:
             return target
-        elif arr[mid]>target:
-            end=mid-1
+
+        elif arr[mid] > target:
+            end = mid - 1
+
         else:
-            start=mid+1
+            start = mid + 1
     return -1
 
 

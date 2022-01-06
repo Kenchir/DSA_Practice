@@ -1,7 +1,10 @@
 '''
+Given number n, return its fibonacci'''
 
 '''
-
+Time complexity : O(n)
+Space complexity : O(n)
+'''
 def fib(n : int) -> int:
 
   if n == 1 :

@@ -46,3 +46,28 @@ assert 8==mySqrt(64)
 assert 9==mySqrt(99)
 
 
+'''
+def sqrt(num):
+    if num <= 1:
+        return num
+
+    start=0
+    end=num
+
+    while start < end:
+
+        mid=start+(end-start)//2
+        square=mid**2
+
+        if square == num:
+            return mid
+
+        elif square < num:
+            start=mid+1
+
+        else:
+            
+            end=mid
+            
+    return start-1
+'''

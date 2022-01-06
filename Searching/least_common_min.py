@@ -9,7 +9,6 @@
 def solution(A,B):
 
     if len(A) ==0 or len(B) == 0:
-
         return -1
 
     A = list(set(A) & set(B))

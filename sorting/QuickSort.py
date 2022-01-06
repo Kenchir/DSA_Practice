@@ -1,5 +1,18 @@
 
+'''
+Quick sort takes two steps in sorting an array, partitioning the array by a pivot
+Place all elements greater thamn pivot after pivot.
+All elements less than pivot before the pivot.
 
+Recursively sort elements before pivot and after pivot again
+
+ Takes O(nlogn) average time complexity  and O(n^2) worst when array is sorted
+
+O(1) space complexity
+
+
+
+'''
 def QuickSort(arr, lo, hi):
 
     if lo >= hi or lo < 0:
@@ -14,7 +27,7 @@ def QuickSort(arr, lo, hi):
 
 def partition(arr, lo, hi):
     pivot = arr[hi]
-    i = lo -1
+    i = lo - 1
 
     for j in range(lo, hi):
          if arr[j] < pivot:

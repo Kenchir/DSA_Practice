@@ -20,13 +20,19 @@ s and t consist of lowercase English letters.
 
 '''
 
+'''
+TC = O(len(s))
+SC = O(n). Using hashmap to store the pairs
+'''
+
     
 def isAnagram( s: str, t: str) -> bool:
         
-        dic = {}
+    
         if len(s) != len(t):
             return False
             
+        dic = {}
         for item in s:
             if item not in dic:
                 dic[item] = 1

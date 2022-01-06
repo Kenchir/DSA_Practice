@@ -1,3 +1,11 @@
+
+'''
+Given an integer array of stockprofit and a target int.
+Find and  return number  distinct stock pairs whose sum is equal to the target.
+
+
+'''
+
 def stockpairs(stockprofit, target):
 
     stockprofit.sort()
@@ -21,3 +29,6 @@ def stockpairs(stockprofit, target):
             high -= 1
 
     return len(pairs)
+
+    
+print(stockpairs([5,7,9,13,11,6,6,3,3],12))

@@ -11,16 +11,21 @@ class Node:
         pass
 
 def insert(root,data)->None:
+
     if root is None:
         root=Node(data)
-    elif data<root.data:
+
+    elif data < root.data:
         if root.left is None:
-            root.left=Node(data)
+            root.left = Node(data)
+
         else:
+
             insert(root.left,data)
     else:
         if root.right is None:
-            root.right=Node(data)
+            root.right = Node(data)
+
         else:
             insert(root.right,data)
 '''
@@ -55,15 +60,16 @@ def delete(root,item):
             temp=root.left
             root.left=None
             root.data=temp.data
-        #Both Childeren
+        #Both Children
         else:
             temp=findLargest(root.left)
             root.data=temp.data
             root.left=delete(root.left,temp.data)
 
-    elif item<root.data:
+    elif item < root.data:
         root.left= delete(root.left,item)
-    elif item>root.data:
+
+    elif item > root.data:
         root.right= delete(root.right,item)
     
     return root
@@ -75,26 +81,29 @@ return -1 not found
 def search(root,item):
     if root is None:
         return -1
-    elif item==root.data:
+    elif item == root.data:
         return item
-    elif item>root.data:
+    elif item > root.data:
         return search(root.right,item)
     else:
         return search(root.left,item)
 
 def in_order(root):
+
     if root is not None:
         in_order(root.left)
         print(root.data)
         in_order(root.right)
 
 def pre_order(root):
+
     if root is not None:
         print(root.data)
         pre_order(root.left)
         pre_order(root.right)
 
 def post_order(root):
+    
     if root is not None:
         post_order(root.left)
         post_order(root.right)
