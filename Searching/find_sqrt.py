@@ -45,23 +45,4 @@ assert 2==mySqrt(8)
 assert 8==mySqrt(64)
 assert 9==mySqrt(99)
 
-def solution(A,B):
-    A=list(set(A) & set(B))
-    
-    
-    if len(A) >0:
-        min=A[0]
-        for index in range(1,len(A)):
-            if A[index+1] < min:
 
-                min=A[index+1]
-                return min
-    return -1
-    
-    n = min(len(A),len(B))
-    for index in range(len(n)):
-        if A[index] in  B[index:]:
-
-            return A[index]
-
-    return -1

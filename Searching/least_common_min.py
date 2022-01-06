@@ -7,21 +7,23 @@
 '''
 
 def solution(A,B):
+
     if len(A) ==0 or len(B) == 0:
 
         return -1
 
-    A=list(set(A) & set(B))
+    A = list(set(A) & set(B))
     
 
     if len(A) > 0:
-        print(A)
+
         min = A[0]
         for index in range(1,len(A)):
 
             if A[index] < min:
                 min = A[index]  
-                return min
+
+        return min
 
     return -1
 

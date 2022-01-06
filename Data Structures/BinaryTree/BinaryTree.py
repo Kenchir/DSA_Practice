@@ -100,6 +100,23 @@ def post_order(root):
         post_order(root.right)
         print(root.data)
 
+def is_binary_tree(root):
+    if root is not None:
+        left, right= root.left, root.right
+
+        if left is not None and root.data > left.data:
+            is_binary_tree(left)
+
+        
+        if right is not None and root.data < right.data:
+            is_binary_tree(right)
+        
+        return False
+        
+    return True
+
+
+
 n=Node(5)
 
 insert(n,3)
