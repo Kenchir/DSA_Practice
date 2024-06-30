@@ -25,3 +25,8 @@ def InsertionSort(arr):
 assert [1, 2, 3, 4, 4, 5, 6, 7]== InsertionSort([7,3,4,6,4,1,5,2])
 assert [1,2,3,4,5,6,7,8,45]==InsertionSort([1,45,2,3,4,6,8,5,7])
 assert [2,31,90,119,125,234,685]==InsertionSort([685,119,90,234,2,125,31])
+
+""""
+arr  [8
+
+"""

@@ -1,76 +1,78 @@
 # from _typeshed import Self
-'''
 
-'''
 
 class Node:
-    def __init__(self,data):
-        self.left=None
-        self.right=None
-        self.data=data
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
         pass
 
-def insert(root,data)->None:
+
+def insert(root, data) -> None:
 
     if root is None:
-        root=Node(data)
+        root = Node(data)
 
     elif data < root.data:
         if root.left is None:
             root.left = Node(data)
 
         else:
-
-            insert(root.left,data)
+            insert(root.left, data)
     else:
         if root.right is None:
             root.right = Node(data)
 
         else:
-            insert(root.right,data)
+            insert(root.right, data)
+
 '''
 Returns the node with largest item from a given root
 '''
+
+
 def findLargest(root):
     if root.right is not None:
         return findLargest(root.right)
     else:
         return root
-    
-'''
+
+
+"""
     Deleting:
     1.  leaf node
     2.  with one child
     3.  has 2 children
-'''
-def delete(root,item):
+"""
+
+
+def delete(root, item):
     if root is None:
         return -1
-    elif root.data==item:
-        #No child
+    elif root.data == item:
+        
+        # No child
         if root.left is None and root.right is None:
-            root=None
-        #Child on right
+            root = None
+        
+        # Child on right
         elif root.left is None:
-            temp=root.right
-            root.right=None
-            root.data=temp.data
-        #Child on left
+            root = root.right
+        # Child on left
         elif root.right is None:
-            temp=root.left
-            root.left=None
-            root.data=temp.data
-        #Both Children
+            root = root.left
+        # Both Children
         else:
-            temp=findLargest(root.left)
-            root.data=temp.data
-            root.left=delete(root.left,temp.data)
+            temp = findLargest(root.left)
+            root.data = temp.data
+            root.left = delete(root.left, temp.data)
 
     elif item < root.data:
-        root.left= delete(root.left,item)
+        root.left = delete(root.left, item)
 
     elif item > root.data:
-        root.right= delete(root.right,item)
+        root.right = delete(root.right, item)
     
     return root
 '''
@@ -111,7 +113,7 @@ def post_order(root):
 
 def is_binary_tree(root):
     if root is not None:
-        left, right= root.left, root.right
+        left, right = root.left, root.right
 
         if left is not None and root.data > left.data:
             is_binary_tree(left)
@@ -136,8 +138,9 @@ insert(n,8)
 insert(n,6)
 insert(n,7)
 
+
 # in_order(n)
 
 n=delete(n,3)
 in_order(n)
-assert search(n,7)==7
+assert search(n,7) == 7

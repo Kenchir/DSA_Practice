@@ -56,7 +56,7 @@ mid    5  2  4  3
 '''
     # return int(mid)
 
-# print(sqrt(0))
+print(sqrt(0))
 
 '''
 two string

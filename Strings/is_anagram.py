@@ -26,12 +26,12 @@ SC = O(n). Using hashmap to store the pairs
 '''
 
     
-def isAnagram( s: str, t: str) -> bool:
+def is_anagram(s: str, t: str) -> bool:
         
     
         if len(s) != len(t):
             return False
-            
+         
         dic = {}
         for item in s:
             if item not in dic:
@@ -51,4 +51,4 @@ def isAnagram( s: str, t: str) -> bool:
         
         
 
-print(isAnagram("fairyll b taleso","rail safety boll"))
+print(is_anagram("fairyll b taleso","rail safety boll"))

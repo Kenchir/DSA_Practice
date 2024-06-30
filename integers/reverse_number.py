@@ -1,31 +1,31 @@
-'''
+"""
 Given integer N, return the reverse of it.
 
 e.g : 123 -> 321
     100 -> 1
 
 
-'''
+"""
 
-def reverseNumber(N):
-    if N > -10 and N < 10:
-        return N
+
+def reverse_number(n):
+    if -10 < n < 10:
+        return n
     
-    sign, N = -1 if N < 0 else 1, abs(N)
-    reversedN = N % 10
-    N = N // 10
+    sign, n = -1 if n < 0 else 1, abs(n)
+    reversed_n = n % 10
+    n = n // 10
 
-    while N != 0:
-        
-        reversedN = reversedN * 10 + N % 10
-        N = N // 10
+    while n != 0:
+        reversed_n = reversed_n * 10 + n % 10
+        n = n // 10
     
-    return reversedN * sign
+    return reversed_n * sign
 
 
-print(reverseNumber(123))
-print(reverseNumber(-123))
-print(reverseNumber(100))
-print(reverseNumber(9))
-
+print(reverse_number(123))
+print(reverse_number(-123))
+print(reverse_number(100))
+print(reverse_number(9))
+print(re)
 

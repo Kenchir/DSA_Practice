@@ -5,7 +5,7 @@ TC = O(n/2)
 SC = O(1)
 '''
 
-def isPalindrome(s):
+def is_palindrome(s):
 
     start, end = 0, len(s) - 1
 
@@ -16,4 +16,5 @@ def isPalindrome(s):
         end -= 1
     return True
 
-print(isPalindrome("abba"))
+assert True == is_palindrome("abba")
+assert False == is_palindrome("abracadabra")

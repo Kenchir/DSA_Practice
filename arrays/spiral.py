@@ -25,12 +25,12 @@ def spiralOrder( matrix):
         arr =[]
 
         while top <= bottom and left <= right:
-            for i in range(left,right + 1):
+            for i in range(left, right + 1):
                 arr.append(matrix[top][i])
 
             top += 1
 
-            for i in range(top ,bottom + 1):
+            for i in range(top, bottom + 1):
                 arr.append(matrix[i][right])
 
             right -= 1
