@@ -10,7 +10,7 @@ def stockpairs(stockprofit, target):
 
     stockprofit.sort()
 
-    pairs, low, high =[], 0, len(stockprofit)-1
+    pairs, low, high = [], 0, len(stockprofit)-1
    
     while low < high:
        

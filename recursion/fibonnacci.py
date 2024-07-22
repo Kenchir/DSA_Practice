@@ -10,37 +10,42 @@ The space needed is for the stack trace where recursive function is called
 k = 5
 
 m = 0
+
+
 def fib(n):
-  global m 
-  m = m + 1
-  if n == 1 :
-    return 1
-
-  if n == 0:
-    return 0
-
-
-  return fib(n - 1) + fib(n - 2)
-
-print(fib(k))
+    global m
+    m = m + 1
+    if n == 1:
+        return 1
+    
+    if n == 0:
+        return 0
+    
+    return fib(n - 1) + fib(n - 2)
 
 
-'''
-Time complexity : O(n)
-Space complexity : O(1)
+print(fib(12))
 
 '''
-def fib_iterative(n):
+Time complexity : O(2^n)
+Space complexity : O(n) - stack trace
 
-  i, n1, n2 =0, 0, 1
-
-  while i < n:
-    n1, n2 = n2, n1 + n2
-    i += 1
-
-  return n2 
-   
+'''
 
 
+def fib_dynamic_programming(n):
+    if n <= 1:
+        return n
+    prev, curr = 0, 1
+    for i in range(1, n):
+        prev, curr = curr, curr + prev
 
-print(fib_iterative(k))
+    return curr
+
+
+"""
+TC = O(n)
+SC = O(1)
+"""
+
+print(fib_dynamic_programming(12))
